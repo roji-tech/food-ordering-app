@@ -1,9 +1,15 @@
-import React from "react";
-import NavbarContainer from "./navbarStyle";
+import React, { useState } from "react";
+import NavbarContainer, { Hambuger } from "./navbarStyle";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
-    <NavbarContainer>
+    <NavbarContainer isOpen={isOpen}>
       <div className="logo">
         <svg
           width="58"
@@ -23,6 +29,11 @@ const Navbar = () => {
         </svg>
         <p>Lilies</p>
       </div>
+      <Hambuger onClick={toggleOpen}>
+        <div />
+        <div />
+        <div />
+      </Hambuger>
       <nav>
         <li>Home</li>
         <li>Login</li>

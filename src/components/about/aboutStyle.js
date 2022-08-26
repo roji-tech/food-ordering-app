@@ -24,6 +24,10 @@ const AboutStyle = styled.div`
 
     color: rgba(255, 255, 255, 0.83);
   }
+
+  @media screen and (max-width: 800px) {
+    width: 96%;
+  }
 `;
 
 export default AboutStyle;

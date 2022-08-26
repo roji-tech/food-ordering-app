@@ -50,5 +50,13 @@ const ContactContainer = styled.section`
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+  }
 `;
 export default ContactContainer;

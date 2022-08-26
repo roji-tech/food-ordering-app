@@ -1,13 +1,16 @@
-:root {
-  width: 99.9%;
-}
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  width: 99.9%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background: #00302e;
+  color: white;
 }

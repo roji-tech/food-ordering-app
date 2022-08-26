@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const NavbarContainer = styled.div`
-  /* top: 73px; */
   box-sizing: border-box;
-  padding: 50px 98px;
+  padding: 50px 0px;
   display: flex;
   width: 100%;
   justify-content: space-between;

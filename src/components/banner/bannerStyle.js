@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-const BannerContainer = styled.div`
-  /* top: 73px; */
+const BannerContainer = styled.section`
   display: flex;
   width: 100%;
   flex-direction: column;

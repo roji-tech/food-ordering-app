@@ -41,6 +41,48 @@ const FooterStyle = styled.footer`
         margin: 0;
         margin-bottom: 12px;
       }
+
+      .but {
+        width: fit-content;
+        height: fit-content;
+
+        * {
+          box-sizing: border-box;
+        }
+
+        button {
+          padding: 6px 10px;
+          min-width: 135px;
+          max-width: 135px;
+          height: 40px;
+          border-radius: 10px;
+          display: grid;
+          grid-template-columns: 30% 70%;
+          background-color: black;
+          color: white;
+          align-content: center;
+          justify-content: space-between;
+          place-items: center;
+          place-content: center;
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            white-space: nowrap;
+            gap: 0;
+
+            .smallT {
+              font-size: 9px;
+            }
+
+            .text2 {
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
     }
 
     @media screen and (max-width: 800px) {

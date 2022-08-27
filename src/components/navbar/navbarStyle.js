@@ -8,6 +8,16 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   color: white;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .logo {
     display: flex;
     /* justify-content: center;
@@ -29,6 +39,10 @@ const NavbarContainer = styled.div`
     gap: 45px;
     font-weight: 500;
     font-size: 21px;
+
+    * {
+      text-decoration: none;
+    }
   }
 
   .S_button {
@@ -80,29 +94,29 @@ const NavbarContainer = styled.div`
 export default NavbarContainer;
 
 export const Hambuger = styled.div`
-         transform: rotate(${({ isOpen }) => (isOpen ? "90deg" : "0deg")});
-         position: absolute;
-         top: 50px;
-         right: 50px;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         width: fit-content;
-         gap: 6px;
-         background-color: black;
-         border-radius: 50%;
-         padding: 15px;
-         cursor: pointer;
-         z-index: 11;
+  transform: rotate(${({ isOpen }) => (isOpen ? "90deg" : "0deg")});
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  gap: 6px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 11;
 
-         div {
-           cursor: pointer;
-           width: 30px;
-           height: 2px;
-           background-color: white;
-         }
+  div {
+    cursor: pointer;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+  }
 
-         @media screen and (min-width: 800px) {
-           display: none;
-         }
-       `;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+`;

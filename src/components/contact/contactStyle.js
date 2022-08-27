@@ -33,6 +33,15 @@ const ContactContainer = styled.section`
       display: flex;
       gap: 8px;
 
+      @media screen and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+
       input {
         width: 299px;
         outline: none;

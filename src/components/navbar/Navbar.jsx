@@ -29,7 +29,7 @@ const Navbar = () => {
         </svg>
         <p>Lilies</p>
       </div>
-      <Hambuger onClick={toggleOpen}>
+      <Hambuger isOpen={isOpen} onClick={toggleOpen}>
         <div />
         <div />
         <div />

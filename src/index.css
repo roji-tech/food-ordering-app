@@ -16,6 +16,7 @@ body {
 }
 
 section {
+  box-sizing: border-box;
   padding: 0 8%;
   /* background-color: aqua; */
 }

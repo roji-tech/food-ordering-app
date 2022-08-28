@@ -39,6 +39,7 @@ const NavbarContainer = styled.div`
     gap: 45px;
     font-weight: 500;
     font-size: 21px;
+    transition: all 0.3s ease;
 
     * {
       text-decoration: none;
@@ -56,6 +57,7 @@ const NavbarContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 800px) {
@@ -87,6 +89,7 @@ const NavbarContainer = styled.div`
       border-radius: 20px;
       top: ${({ isOpen }) => (isOpen ? "120px" : "-265px")};
       right: 0;
+      transition: all 0.3s ease;
     }
   }
 `;
@@ -94,26 +97,31 @@ const NavbarContainer = styled.div`
 export default NavbarContainer;
 
 export const Hambuger = styled.div`
-  transform: rotate(${({ isOpen }) => (isOpen ? "90deg" : "0deg")});
   position: absolute;
   top: 50px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  right: 0;
   width: fit-content;
-  gap: 6px;
   background-color: black;
-  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
   padding: 15px;
-  cursor: pointer;
   z-index: 11;
 
-  div {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateX(${({ isOpen }) => (isOpen ? "95deg" : "0deg")});
+    transition: all 0.4s;
+    gap: 5px;
     cursor: pointer;
-    width: 30px;
-    height: 2px;
-    background-color: white;
+
+    div {
+      cursor: pointer;
+      width: 25px;
+      height: 2px;
+      background-color: white;
+    }
   }
 
   @media screen and (min-width: 800px) {

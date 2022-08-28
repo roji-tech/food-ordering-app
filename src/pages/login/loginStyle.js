@@ -4,6 +4,7 @@ const LoginStyle = styled.div`
   * {
     box-sizing: border-box;
   }
+
   width: 100vw;
   height: 100vh;
   background-color: rebeccapurple;
@@ -12,7 +13,7 @@ const LoginStyle = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
   }
 
   div {
@@ -29,7 +30,10 @@ const LoginStyle = styled.div`
   }
 
   .image {
-    background-color: yellow;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
 
     img {
       height: 100%;

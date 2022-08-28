@@ -31,9 +31,11 @@ const Navbar = () => {
         <p>Lilies</p>
       </div>
       <Hambuger isOpen={isOpen} onClick={toggleOpen}>
-        <div />
-        <div />
-        <div />
+        <div className="container">
+          <div />
+          <div />
+          <div />
+        </div>
       </Hambuger>
       <nav>
         <li>
@@ -46,7 +48,9 @@ const Navbar = () => {
             Login
           </Link>
         </li>
-        <li className="S_button">Sign Up</li>
+        <Link className="link" to={"/reg"}>
+          <li className="S_button">Sign Up</li>
+        </Link>
       </nav>
     </NavbarContainer>
   );

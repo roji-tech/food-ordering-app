@@ -43,8 +43,14 @@ const FooterStyle = styled.footer`
       }
 
       .but {
+        justify-self: start;
+        align-self: flex-start;
         width: fit-content;
         height: fit-content;
+
+        @media screen and (max-width: 800px) {
+          align-self: center;
+        }
 
         * {
           box-sizing: border-box;

@@ -11,7 +11,7 @@ const Register = () => {
           <img src={img} alt="" />
         </div>
         <div className="form">
-          <h3>Welcome Back!</h3>
+          <h3>Welcome to Lilies!</h3>
           <form>
             <input
               type="password"
@@ -31,7 +31,7 @@ const Register = () => {
               id="password"
               placeholder="Your Password"
             />
-            <button type="button">LOGIN</button>
+            <button type="button">SIGN UP</button>
             <div className="external">
               <p>
                 Already have an account. <Link to="/login">LOGIN</Link>

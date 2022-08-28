@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
 }
 
 :root {
@@ -15,13 +16,10 @@ body {
   padding: 0;
 }
 
-.home {
-  background: #00302e;
-  color: white;
+button {
+  cursor: pointer;
 }
 
-section {
-  box-sizing: border-box;
-  padding: 0 8%;
-  /* background-color: aqua; */
+a {
+  color: inherit;
 }

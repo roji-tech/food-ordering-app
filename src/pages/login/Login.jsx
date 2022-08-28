@@ -1,6 +1,7 @@
 import React from "react";
 import LoginStyle from "./loginStyle";
 import img from "../../imgs/bon5.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -26,7 +27,9 @@ const Login = () => {
             />
             <button type="button">LOGIN</button>
             <div className="external">
-              <p>Create an account</p>
+              <p>
+                <Link to="/reg"> Create an account</Link>
+              </p>
               <p>Forgot Passoword</p>
             </div>
           </form>

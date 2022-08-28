@@ -39,7 +39,7 @@ const Navbar = () => {
       </Hambuger>
       <nav>
         <li>
-          <Link className="link" to={"/"}>
+          <Link className="link" to={"/dashboard"}>
             Home
           </Link>
         </li>

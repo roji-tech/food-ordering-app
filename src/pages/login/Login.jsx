@@ -10,6 +10,7 @@ const Login = () => {
           <img src={img} alt="" />
         </div>
         <div className="form">
+          <h3>Welcome Back!</h3>
           <form>
             <input
               type="email"
@@ -23,7 +24,11 @@ const Login = () => {
               id="password"
               placeholder="Your Password"
             />
-            <button>LOGIN</button>
+            <button type="button">LOGIN</button>
+            <div className="external">
+              <p>Create an account</p>
+              <p>Forgot Passoword</p>
+            </div>
           </form>
         </div>
       </div>

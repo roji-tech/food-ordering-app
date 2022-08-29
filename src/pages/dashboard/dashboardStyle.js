@@ -3,7 +3,7 @@ import styled from "styled-components";
 const DashboardStyle = styled.section`
   padding: 0;
   margin: 0;
-  background-color: teal;
+  /* background-color: teal; */
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -19,6 +19,7 @@ const DashboardStyle = styled.section`
     justify-content: start;
     padding-top: 50%;
     gap: 15%;
+    transition: all 0.4s ease-in-out;
 
     .top {
       display: flex;
@@ -56,6 +57,7 @@ const DashboardStyle = styled.section`
         justify-content: start;
         padding-left: 12px;
         border-radius: 12px;
+        cursor: pointer;
 
         .text {
           font-family: "Poppins";
@@ -69,7 +71,7 @@ const DashboardStyle = styled.section`
         .box {
           position: absolute;
           top: 50%;
-          right: 5%;
+          right: 2%;
           box-sizing: border-box;
           background-color: #f3c294;
           border: 1px solid #06e775;
@@ -96,6 +98,13 @@ const DashboardStyle = styled.section`
       .dashboard {
         background: #efefef;
       }
+    }
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      height: max-content;
     }
   }
 
@@ -134,6 +143,75 @@ const DashboardStyle = styled.section`
       justify-content: center;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    /* flex-direction: column; */
+
+    .left {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      left: ${({ isOpen }) => (isOpen ? "0" : "-55%")};
+      height: 100%;
+      height: 100vh;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 30px;
+      padding-top: 15%;
+      gap: 15%;
+
+      h3 {
+        color: whitesmoke !important;
+      }
+
+      .link {
+        color: whitesmoke;
+
+        .text {
+          color: whitesmoke !important;
+        }
+      }
+
+      .dashboard {
+        background-color: gray !important;
+      }
+    }
+  }
 `;
 
 export default DashboardStyle;
+
+export const Hambuger = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: fit-content;
+  background-color: black;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 15px;
+  z-index: 11;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateX(${({ isOpen }) => (isOpen ? "95deg" : "0deg")});
+    transition: all 0.4s;
+    gap: 5px;
+    cursor: pointer;
+
+    div {
+      cursor: pointer;
+      width: 25px;
+      height: 2px;
+      background-color: white;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+`;

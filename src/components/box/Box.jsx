@@ -7,8 +7,15 @@ const Box = ({ imgSrc }) => {
     <BoxStyle>
       <div>
         <img src={imgSrc || img1} alt="" />
+        <h3>Stir Fry Pasta</h3>
+        <small>
+          The in-house pasta and <br /> chicken by chef Moose
+        </small>
       </div>
-      <div></div>
+      <div className="pricing">
+        <p>N1,000.00</p>
+        <p>Add to cart</p>
+      </div>
     </BoxStyle>
   );
 };

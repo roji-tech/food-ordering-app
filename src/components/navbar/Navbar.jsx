@@ -5,7 +5,7 @@ import NavbarContainer, { Hambuger } from "./navbarStyle";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleOpen = () => {
+  const toggleIsOpen = () => {
     setIsOpen((prev) => !prev);
   };
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         </svg>
         <p>Lilies</p>
       </div>
-      <Hambuger isOpen={isOpen} onClick={toggleOpen}>
+      <Hambuger isOpen={isOpen} onClick={toggleIsOpen}>
         <div className="container">
           <div />
           <div />

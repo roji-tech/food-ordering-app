@@ -16,7 +16,6 @@ const Contact = () => {
           <input
             type="text"
             placeholder="gregphillips@gmail.com"
-            
           />
           <button>Get notified</button>
         </div>

@@ -1,10 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "../../components/box/Box";
-import DashboardStyle from "./dashboardStyle";
+import Cart from "../../components/cart/Cart";
+import Order from "../../components/order/Order";
+import DashboardStyle, { Hambuger } from "./dashboardStyle";
 
 const Dashboard = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const [showOrders, setShowOrders] = useState(false);
+  const [showCheckout, setShowCheckout] = useState(false);
+
+  const toggleIsOpen = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const toggleShow = (type) => {
+    if (type === "cart") {
+      // if (!showCart && !showOrders) {
+      setShowOrders(false);
+      setShowCheckout(false);
+      setShowCart((prev) => !prev);
+      // } else {
+      // }
+    } else {
+      // if (!showCart && !showOrders) {
+      setShowCheckout(false);
+      setShowCart(false);
+      setShowOrders((prev) => !prev);
+      // }
+    }
+    console.log("show");
+  };
+
   return (
-    <DashboardStyle>
+    <DashboardStyle isOpen={isOpen}>
+      <Cart show={showCart} />
+      <Order show={showOrders} />
+      <Hambuger isOpen={isOpen} onClick={toggleIsOpen}>
+        <div className="container">
+          <div />
+          <div />
+          <div />
+        </div>
+      </Hambuger>
       <div className="left">
         <div className="top">
           <svg
@@ -60,7 +98,7 @@ const Dashboard = () => {
             </li>
             <li className="text">Your Profile</li>
           </div>
-          <div className="link">
+          <div className="link" onClick={() => toggleShow("order")}>
             <li>
               <svg
                 width="18"
@@ -80,7 +118,11 @@ const Dashboard = () => {
             <li className="text">Orders</li>
             <div className="box orderBox">6</div>
           </div>
-          <div className="link">
+          <div
+            className="link"
+            toggleCheckout={setShowCheckout}
+            onClick={() => toggleShow("cart")}
+          >
             <li>
               <svg
                 width="16"

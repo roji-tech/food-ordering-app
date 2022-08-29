@@ -13,7 +13,7 @@ const ContactContainer = styled.section`
 
     h2 {
       font-size: 36px;
-      line-height: 30px;
+      line-height: 37px;
       font-weight: 700;
     }
 
